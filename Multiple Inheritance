@@ -1,0 +1,26 @@
+class Movies:
+    ticket_amount=150
+    no_of_audience=0
+
+    def __init__(self,movie_name,theatre_name,city):
+        self.movie_name=movie_name
+        self.theatre_name=theatre_name
+        self.city=city
+        Movies.no_of_audience=Movies.no_of_audience+1
+
+class Comedy_movies(Movies):
+    ticket_amount=180
+    def __init__(self,movie_name,theatre_name,city):
+        super().__init__(movie_name,theatre_name,city)
+
+class Action_comedy(Comedy_movies):
+    ticket_amount=200
+    def __init__(self,movie_name,theatre_name,city,released_year):
+        super(). __init__(movie_name,theatre_name,city)
+        self.released_year=released_year
+
+audience1=Action_comedy('Idiot','Sakthi cinemas','Chennai',2021)
+audience2=Action_comedy('Legend','Anbu cinemas','Trichy',2022)
+
+print(audience1.ticket_amount)
+print(audience2.released_year)
