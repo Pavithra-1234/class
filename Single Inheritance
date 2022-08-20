@@ -1,0 +1,15 @@
+class Movies:
+    def __init__(self,movie_name,theatre_name,city):
+        self.movie_name=movie_name
+        self.theatre_name=theatre_name
+        self.city=city
+
+class Comedy_movies(Movies):
+    def __init__(self,movie_name,theatre_name,city):
+        super().__init__(movie_name,theatre_name,city)
+
+audience1=Comedy_movies('Idiot','Sakthi cinemas','Chennai')
+audience2=Comedy_movies('Legend','Anbu cinemas','Trichy')
+
+print(audience1.movie_name)
+print(audience2.theatre_name)
