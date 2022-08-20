@@ -1,0 +1,28 @@
+class Movies:
+    ticket_amount=150
+    no_of_audience=0
+
+    def __init__(self,movie_name,theatre_name,city):
+        self.movie_name=movie_name
+        self.theatre_name=theatre_name
+        self.city=city
+        Movies.no_of_audience=Movies.no_of_audience+1
+
+class Comedy_movies(Movies):
+    ticket_amount=180
+    def __init__(self,movie_name,theatre_name,city):
+        super().__init__(movie_name,theatre_name,city)
+
+class Horror_movies(Movies):
+    ticket_amount=200
+    def __init__(self,movie_name,theatre_name,city):
+        super().__init__(movie_name,theatre_name,city)
+        
+    
+audience1=Comedy_movies('Idiot','Sakthi cinemas','Chennai')
+audience2=Comedy_movies('Legend','Anbu cinemas','Trichy')
+
+audience3=Horror_movies('D-Block','PB cinemas','Ooty')
+
+print(audience3.movie_name)
+print(audience3.city)
